@@ -31,6 +31,9 @@ module.exports = {
             query: {
                 presets: ['env', 'react']
             }
+        }, {
+            test: /\.scss$/,
+            loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
         }]
     },
     plugins: [

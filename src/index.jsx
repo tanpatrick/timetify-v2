@@ -3,6 +3,8 @@ import {
     render
 } from 'react-dom'
 
+import './styles/main.scss'
+
 import Routes from './routes'
 
 render(
