@@ -1,9 +1,14 @@
 $font-stack: Helvetica, sans-serif;
 
 $primary-color: #333;
-$font-size: 13px;
+
+// $font-size: 13px;
 
 body {
-    font: $font-size $font-stack;
+    // font: $font-size $font-stack;
     color: $primary-color;
+}
+
+.container-fluid {
+    padding-top: 80px;
 }
