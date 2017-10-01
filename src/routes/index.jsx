@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom'
 
 import About from './about'
+import Groups from './groups'
 import Home from './home'
 import Projects from './projects'
-import Settings from './settings'
 import Users from './users'
 
 const Routes = () => (
@@ -33,20 +33,24 @@ const Routes = () => (
                                 Home
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" activeClassName="active" exact to="/projects">
-                                Projects
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" activeClassName="active" exact to="/users">
-                                Users
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" activeClassName="active" exact to="/settings">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="true" aria-expanded="false">
                                 Settings
-                            </NavLink>
+                            </a>
+
+                            <div className="dropdown-menu">
+                                <NavLink className="dropdown-item" exact to="/projects">
+                                    Projects
+                                </NavLink>
+                                <div className="dropdown-divider"></div>
+                                <NavLink className="dropdown-item" exact to="/groups">
+                                    Groups
+                                </NavLink>
+                                <NavLink className="dropdown-item" exact to="/users">
+                                    Users
+                                </NavLink>
+                            </div>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" exact to="/about">
@@ -60,7 +64,7 @@ const Routes = () => (
                 <Route exact path="/" component={Home} />
                 <Route exact path="/projects" component={Projects} />
                 <Route exact path="/users" component={Users} />
-                <Route exact path="/settings" component={Settings} />
+                <Route exact path="/groups" component={Groups} />
                 <Route path="/about" component={About} />
             </div>
         </div>
