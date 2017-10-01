@@ -58,11 +58,12 @@ class Datatable extends Component {
                 </div>
                 <div className="col-auto">
                     <Button label={this.props.buttonLabel}
-                        style="success" />
+                        style="success"
+                        onClick={this.props.buttonOnClick} />
                 </div>
             </div>,
             <div className={this.props.className}>
-                <table className="table table-bordered table-responsive">
+                <table className="table table-bordered table-responsive table-hover">
                     <thead className="thead-default">
                         <tr>
                             {tableColumns}

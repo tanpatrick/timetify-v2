@@ -7,6 +7,8 @@ import './styles/main.scss'
 
 import Routes from './routes'
 
+window.React = React
+
 render(
     <Routes />,
     document.querySelector('#app')
