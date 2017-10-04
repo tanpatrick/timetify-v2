@@ -4,9 +4,13 @@
     "description": "A simple web application built using ReactJS",
     "author": "Patrick Tan <tanpatrickjoseph@gmail.com> (https://nz.linkedin.com/in/patrickjosephtan)",
     "license": "ISC",
+    "engines": {
+        "node": "8.6.x",
+        "npm": "5.3.x"
+    },
     "scripts": {
-        "start": "node_modules/.bin/webpack-dev-server",
-        "build": "webpack",
+        "start": "node_modules/.bin/webpack && node_modules/.bin/webpack-dev-server",
+        "build": "node_modules/.bin/webpack",
         "dev": "node_modules/.bin/webpack-dev-server && webpack"
     },
     "devDependencies": {
